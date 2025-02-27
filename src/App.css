@@ -62,7 +62,12 @@
     --smaller-font-size: 0.75rem;
   }
 }
-
+/*=============== Dark mode ===============*/
+[data-theme = "dark"] {
+  --body-color: black;
+  --title-color: #CCC;
+  --title-color-dark: #33ffff;
+}
 /*=============== BASE ===============*/
 * {
   margin: 0;
