@@ -9,12 +9,19 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color: hsl(var(--hue), var(--sat), 20%);  
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
   --body-color: hsl(var(--hue), var(--sat), 98%);
+  --body-color-odd: hsl(var(--hue), var(--sat), 90%) ;
+
+
+  /*========== Colors ==========*/
   --container-color: #fff;
-  
+  --pattern-color:  hsl(var(--hue), var(--sat), 46%);
+  --box-color: #33ffff;
+  --boxshadow-color: hsl(var(--hue), var(--sat), 0%);
+
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
 
@@ -46,8 +53,11 @@
 
   /*========== z index ==========*/
   --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-fixed: 100; 
   --z-modal: 1000;
+  
+  /*========== Background ==========*/
+  
 }
 
 /* Responsive typography */
@@ -65,8 +75,11 @@
 /*=============== Dark mode ===============*/
 [data-theme = "dark"] {
   --body-color: black;
+  --body-color-odd: #1a1a1a;
   --title-color: #CCC;
   --title-color-dark: #33ffff;
+  --boxshadow-color: #33ffff;
+  --pattern-color:  #33ffff;
 }
 /*=============== BASE ===============*/
 * {
@@ -90,6 +103,11 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  /*background-image: var(--bg-lightmode); 
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;*/
+  
 }
 
 h1,
@@ -105,6 +123,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
@@ -117,10 +136,18 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 6rem 0 2rem;
+}
+.section-even {
+  background-color: var(--body-color);
+  padding: 40px 0;
+}
+
+.section-odd {
+  background-color: var(--body-color-odd);
+  padding: 40px 0;
 }
 
 .section__title {
@@ -140,6 +167,7 @@ img {
 }
 
 /*=============== LAYOUT ===============*/
+
 .container {
   max-width: 968px;
   margin-left: auto;
@@ -156,7 +184,7 @@ img {
   display: inline-block;
   background-color: var(--title-color);
   color: var(--container-color);
-  padding: 1.25rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }
@@ -221,3 +249,4 @@ img {
     margin-right: var(--mb-1);
   }
 }
+

@@ -1,0 +1,8 @@
+.footer__container {
+    display: block;
+    text-align: center;
+    justify-items: center;
+    padding: var(--mb-1);
+    
+    border-top: var(--title-color) solid 1px;
+}

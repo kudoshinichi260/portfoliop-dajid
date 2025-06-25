@@ -1,6 +1,11 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    background-color: var(--body-color);
+}
 .nav__img {
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
@@ -27,9 +32,9 @@
 }
 .nav__logo-img {
     width: auto;
-    max-width: 150px; /* Kích thước tối đa của logo */
-    height: auto; /* Đảm bảo giữ tỷ lệ hình ảnh */
-    transition: all 0.3s ease; /* Hiệu ứng mượt khi thay đổi kích thước */
+    max-width: 150px; 
+    height: auto; 
+    transition: all 0.3s ease; 
 }
 .nav__list {
     display: flex;
@@ -39,9 +44,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: var(--small-font-size);
+    font-size: var(--h3-font-size);
     color: var(--title-color);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-bold);
     transition: 0.3s;
 }
 .nav__icon,
@@ -68,6 +73,7 @@
     }
     .nav__menu {
         position: fixed;
+        z-index: 3;
         bottom: -100%;
         left: 0;
         width: 100%;

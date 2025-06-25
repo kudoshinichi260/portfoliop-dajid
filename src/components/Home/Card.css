@@ -1,0 +1,117 @@
+/* --- Home card --- */
+.hone__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-item {
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    box-shadow: 0px 10px 10px var(--boxshadow-color);
+    justify-content: center;
+    display: flex;
+    background-color: black;
+}
+
+/* --- Card content */
+.home__card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/img/bg-avt.jpg');
+    background-size:cover;
+    background-position: center;
+    position: relative;
+}
+.card-major {
+    background-color: #fff;
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 0 0 10px 10px ;
+    margin-bottom: 1.2rem;
+    transform: rotate(90deg);
+    transform-origin: right;
+    position: absolute;
+    right: 1rem;
+}
+.card-infor{
+    box-shadow: 0px -4px 10px hsla(0, 0%, 0%, 0.7);
+    background-color: black;
+    width:  100%;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    border-radius: 40px 40px 0 0 ;
+    color: var(--text-color);
+}
+.card-hashtag {
+    display: flex;
+}
+/* --- Swap card */
+.swap-card {
+    position: relative;
+    cursor: pointer;
+}
+.home__card-avt {
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+  }
+  
+.home__card-content {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    opacity: 0.5;
+}
+  
+/* Khi swap */
+.home__card-avt.swapped {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.home__card-content.swapped {
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    opacity: 1;
+  }
+  /*=============== BREAKPOINTS ===============*/
+/* For large devices */
+    @media screen and (max-width: 992px) {
+        .card-item {
+            width:  calc(250px*0.8) ;
+            height: calc(350px*0.8) ;
+        }
+        .card-major {
+            font-size: var(--small-font-size);
+        }
+    }
+    
+    /* For medium devices */
+    @media screen and (max-width: 768px) {
+        .card-item {
+            width:  calc(250px*0.7) ;
+            height: calc(350px*0.7) ;
+        }
+        .card-major {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        
+    }
+
+    /* For small devices */
+    @media screen and (max-width: 350px) {
+
+    }
