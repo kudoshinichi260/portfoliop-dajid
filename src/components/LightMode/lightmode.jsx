@@ -1,7 +1,7 @@
 import React from "react";
 import "./LightMode.css";
-
 const lightmode = () => {
+    
     const setDarkMode = () => {
         document.querySelector("body").setAttribute("data-theme", "dark");
     };
@@ -11,6 +11,7 @@ const lightmode = () => {
     const toggleTheme = (e) => {
         if(e.target.checked) setDarkMode();
         else setLightMode();
+        
     }
     return (
         <div>

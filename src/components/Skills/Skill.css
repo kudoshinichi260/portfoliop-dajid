@@ -1,0 +1,119 @@
+/*=========Skill ===========*/
+.skill__container {
+  margin-bottom: var(--mb-2);
+}
+
+/*========= Skill chart ========*/
+.chart__container {
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    justify-self: center;
+    margin: var(--mb-2);
+}
+.donut-chart__wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+
+.donut-chart__title {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+/*========= Technical skill ========*/
+.technical__container  {
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 3rem;
+  justify-content: center;
+}
+.technical__content {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+  border-radius: 1.25rem;
+}
+.technical__box {
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+  column-gap: 1rem;
+}
+.technical__title {
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+}
+.technical__item  {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+.chart-cell {
+  fill: var(--pattern-color);
+}
+/* ScrollVelocity.css */
+.slider-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 20px 20px 0;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  
+  width: max-content;
+  animation: marquee 15s linear infinite;
+}
+
+.icon-style {
+  font-size: 1rem; /* Icon lớn hơn */
+  width: 64px;
+  height: 64px;
+  background-color: var(--container-color);
+  margin-right: 100px; /* Khoảng cách lớn hơn */
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px var(--boxshadow-color);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .chart__container {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .technical__container {
+    grid-template-columns: 1fr;
+  }
+  .backend {
+     order: inherit;
+  }
+  .technical__content {
+    padding: 1rem 0.5rem;
+    border-radius: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+
+}

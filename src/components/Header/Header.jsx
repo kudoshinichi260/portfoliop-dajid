@@ -16,6 +16,7 @@ const Header = () => {
         observer.observe(document.body, { attributes: true, attributeFilter: ["data-theme"] });
         return () => observer.disconnect();
     }, []);
+
     return (
         <header className="header">
             <nav className="nav container">
